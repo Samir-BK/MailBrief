@@ -1,20 +1,23 @@
 from flask import Flask, render_template, request, jsonify
 import os
 from dotenv import load_dotenv
-from openAI import OpenAI
+import openai
 
 app = Flask(__name__)
 
 load_dotenv()
-api_key  = os.getenv("GROQ_API_KEEY")
+client = openai.OpenAI(
+    base_url="https://api.groq.com/openai/v1",
+    api_key=os.environ.get("GROQ_API_KEY")
+)
 
-client = OpenAI(api_key)
+
 
 @app.route("/")
 def hello_world():
     return render_template("index.html")
 
-@app.route("/ask", method = ["POST"])
+@app.route("/ask", methods = ["POST"])
 def ask():
     query = request.form.get("question")
 
@@ -34,7 +37,7 @@ def ask():
     answer = response.output_text.strip()
     return jsonify({"response": answer}), 200
 
-@app.route("/summarize", method = ["POST"])
+@app.route("/summarize", methods = ["POST"])
 def summarize():
     email = request.form.get("email")
     prompt = f"Summarize the following email in 6-7 sentences: {email}"
