@@ -13,9 +13,20 @@
     <div class="container">
         <h2>Ask Anything</h2>
         <form id="askform">
-            <input type="text" placeholder="Ask anythin..." required>
-            <button> type = "submit">Ask</button>
+            <input type="text" name="question" placeholder="Ask anything..." required>
+            <button type="submit">Ask</button>
         </form>
+        <p id="ask-loading" style="display: none">Processing...</p>
+        <p id="answer"></p>
+
+
+        <h2>Summarize Email</h2>
+        <form id="emailform">
+            <textarea type="text" name="email" placeholder="Place your email here..." required></textarea>
+            <button type="submit">Summarize</button>
+        </form>
+        <p id="summary-loading" style="display: none">Processing...</p>
+        <p id="summary"></p>
     </div>
 </body>
 
