@@ -41,7 +41,7 @@ def ask():
 def summarize():
     email = request.form.get("email")
     prompt = f"Summarize the following email in 6-7 sentences: {email}"
-    response = client.response.create(
+    response = client.responses.create(
         model = "openai/gpt-oss-20b",
         input = [
             {

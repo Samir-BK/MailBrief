@@ -18,7 +18,7 @@ document.getElementById("askform").onsubmit = async (e) => {
 
 document.getElementById("emailform").onsubmit = async (e) => {
   e.preventDefault();
-  let emailData = new formData(e.target);
+  let emailData = new FormData(e.target);
 
   let loading = document.getElementById("summary-loading");
   loading.style.display = "block"; // show loader
