@@ -1,3 +1,4 @@
 flask
 openai
-python-dotenvgunicorn
+python-dotenv
+gunicorn
