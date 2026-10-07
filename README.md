@@ -1,4 +1,4 @@
-# Personalized AI Assistant
+# MailBrief
 
 A lightweight web-based AI assistant built with Flask. It can answer general questions and summarize emails using an LLM served through the Groq API.
 
