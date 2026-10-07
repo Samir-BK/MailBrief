@@ -2,6 +2,8 @@
 
 A lightweight web-based AI assistant built with Flask. It can answer general questions and summarize emails using an LLM served through the Groq API.
 
+[![Live Demo](https://img.shields.io/badge/Live_Demo-Render-46E3B7?style=for-the-badge&logo=render&logoColor=white)](https://mailbrief.onrender.com/)
+
 ## Features
 
 - **Ask Anything** – Submit any question and get an AI-generated response.
